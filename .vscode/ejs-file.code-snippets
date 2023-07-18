@@ -1,0 +1,14 @@
+{
+	"EJS File": {
+		"scope": "javascript,typescript",
+		"prefix": "file-ejs",
+		"body": [
+			"<%- include('./includes/header') %>",
+			"",
+			"$1",
+			"",
+			"<%- include('./includes/footer') %>",
+		],
+		"description": "Criar umm arquivo base do EJS"
+	}
+}
