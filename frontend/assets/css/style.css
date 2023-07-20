@@ -2,6 +2,11 @@
 
 * {
     font-family: 'Poppins', sans-serif;
+    color: #0c0c0f;
+}
+
+.bg-tini-light {
+    background-color: #e8e8e8;
 }
 
 a {
@@ -23,9 +28,10 @@ main.container {
 }
 
 .card {
+    border: none;
     border-radius: 0 20px 20px 0!important;
     min-width: 300px!important;
-    background-color: #5a5a5a!important;
+    background-color: #ededed!important;
     max-height: 250px;
 }
 
@@ -39,7 +45,7 @@ main.container {
 }
 
 .card a{
-    color: white;
+    color: #1a5008;
     transition: all 200ms ease-in-out;
 }
 .card a:hover {

@@ -3,10 +3,9 @@ const plumbus = require('rickmortyapi');
 
 exports.home = async (req, res) => {
     try {
-        const rick = await plumbus.getCharacter(1)
-        // const c = await plumbus.getCharacters();
-        // const characters = await c.results[0]
-        const r = rick.data
+        const rick = await plumbus.getCharacters()
+        const r = rick.data.results
+        
         res.render('index', { r });
     } catch (error) {
         console.log(error);
@@ -19,9 +18,9 @@ exports.search = async (req, res) => {
 }
 
 
-async function asd() {
-    const rick = await plumbus.getCharacter(1)
-    console.log(rick.data.name)
-}
+// async function asd() {
+//     const rick = await plumbus.getCharacters()
+//     console.log(rick.data.results)
+// }
 
-asd()
+// asd()
