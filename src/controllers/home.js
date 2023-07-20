@@ -6,8 +6,15 @@ exports.home = async (req, res) => {
         const rick = await plumbus.getCharacters()
         const r = rick.data.results
         
-        res.render('index', { r });
-    } catch (error) {
+        for (const character of r) {
+            const firstEpisodeName = await getFirstEpisodeName(character.name);
+            character.firstEpisodeName = firstEpisodeName;
+        }
+        
+        res.render('index', { r, getFirstEpisodeName })
+        
+    }
+    catch (error) {
         console.log(error);
         res.status(500).render('errorAPI');
     }
@@ -17,10 +24,26 @@ exports.search = async (req, res) => {
     await res.send('agr fudeo');
 }
 
+async function getFirstEpisodeName(characterName) {
+    try {
+        // Obtém todos os personagens
+        const response = await plumbus.getCharacters();
+        const characters = response.data.results;
 
-// async function asd() {
-//     const rick = await plumbus.getCharacters()
-//     console.log(rick.data.results)
-// }
+        // Procura o personagem pelo nome na lista de resultados
+        const character = characters.find((char) => char.name.toLowerCase() === characterName.toLowerCase());
 
-// asd()
+        if (!character) {
+            console.log(`O personagem "${characterName}" não foi encontrado.`);
+            return;
+        }
+        const firstEpisodeId = character.episode[0].split('/').pop();
+
+        const episodeResponse = await plumbus.getEpisode(parseInt(firstEpisodeId));
+        const firstEpisodeName = episodeResponse.data.name;
+
+        return String(firstEpisodeName)
+    } catch (error) {
+        console.error('Ocorreu um erro ao obter informações do personagem:', error.message);
+    }
+}
