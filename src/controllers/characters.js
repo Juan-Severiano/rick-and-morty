@@ -10,7 +10,7 @@ exports.characters = async (req, res) => {
     const characters = charactersAll.data.results;
 
     for (const c of characters) {
-      const firstEpisodeName = await getFirstEpisodeName2(c.name, characters); // Passa a lista de personagens como o segundo argumento
+      const firstEpisodeName = await getFirstEpisodeName2(c.name, characters);
       c.firstEpisodeName = firstEpisodeName;
     }
     res.render('charactersList', { characters, page });
@@ -20,7 +20,7 @@ exports.characters = async (req, res) => {
   }
 };
 
-const getFirstEpisodeName2 = async (characterName, charactersList) => { // Recebe a lista de personagens como segundo argumento
+const getFirstEpisodeName2 = async (characterName, charactersList) => {
   try {
     const character = charactersList.find((char) => char.name.toLowerCase() === characterName.toLowerCase());
 
