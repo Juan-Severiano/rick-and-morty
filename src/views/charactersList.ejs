@@ -1,0 +1,14 @@
+<%- include('./includes/head') %>
+
+  <section class="bg-tini-light d-flex flex-column align-items-center justify-content-center">
+    <%- include('./includes/character') %>
+
+        <div class="d-flex align-items-center justify-content-between" style="width: 200px; ">
+          <% if (page> 1) { %>
+            <a style="color: #343a40!important;" href="/characters?page=<%= page - 1 %>" class="prev d-flex align-item-center"><i class="bi bi-caret-left"></i>Preview</a> | 
+            <% } %>
+              <a style="color: #343a40!important;" href="/characters?page=<%= page + 1 %>" class="next d-flex align-item-center">Next <i class="bi bi-caret-right"></i></a>
+        </div>
+  </section>
+
+  <%- include('./includes/footer') %>

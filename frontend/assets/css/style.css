@@ -6,6 +6,8 @@
 }
 
 .list-characters {
+    margin-top: 30px;
+    max-width: 1300px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -83,7 +85,6 @@ main.container {
 }
 
 .character {
-    margin: 5px;
     flex-direction: row;
     width: 600px;
     min-height: 200px;

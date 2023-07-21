@@ -3,15 +3,15 @@ const plumbus = require('rickmortyapi');
 
 exports.home = async (req, res) => {
     try {
-        const rick = await plumbus.getCharacters()
-        const r = rick.data.results
+        const charactersAll = await plumbus.getCharacters()
+        const characters = charactersAll.data.results
         
-        for (const character of r) {
-            const firstEpisodeName = await getFirstEpisodeName(character.name);
-            character.firstEpisodeName = firstEpisodeName;
+        for (const c of characters) {
+            const firstEpisodeName = await getFirstEpisodeName(c.name);
+            c.firstEpisodeName = firstEpisodeName;
         }
         
-        res.render('index', { r, getFirstEpisodeName })
+        res.render('index', { characters })
         
     }
     catch (error) {
@@ -24,13 +24,11 @@ exports.search = async (req, res) => {
     await res.send('agr fudeo');
 }
 
-async function getFirstEpisodeName(characterName) {
+const getFirstEpisodeName = async (characterName) => {
     try {
-        // Obtém todos os personagens
         const response = await plumbus.getCharacters();
         const characters = response.data.results;
 
-        // Procura o personagem pelo nome na lista de resultados
         const character = characters.find((char) => char.name.toLowerCase() === characterName.toLowerCase());
 
         if (!character) {
