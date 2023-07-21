@@ -1,6 +1,4 @@
 const { async } = require('regenerator-runtime');
-const home = require('./home')
-const getFirstEpisodeName = home.getFirstEpisodeName
 const plumbus = require('rickmortyapi');
 
 exports.characters = async (req, res) => {
