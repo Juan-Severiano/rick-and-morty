@@ -15,8 +15,36 @@
     padding: 0!important;
 }
 
+#change-theme {
+    max-width: 50px;
+}
+
+#change-theme:hover {
+    cursor: pointer;
+}
+
 .bg-tini-light {
     background-color: #e8e8e8;
+}
+
+.dark-theme {
+    background-color: #272b33;
+}
+
+.dark-theme a.next, .dark-theme a.prev, .dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme .status{
+    color: #ededed!important;
+}
+
+.dark-theme .card a {
+    color: #37be0a!important;
+}
+
+.dark-theme .card a:hover {
+    color: #258604 !important;
+}
+
+.dark-theme .card {
+    background-color: #3c3e44!important;
 }
 
 a {
