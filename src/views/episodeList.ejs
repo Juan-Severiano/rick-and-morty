@@ -1,0 +1,16 @@
+<%- include('./includes/head') %>
+
+  <section class="bg-tini-light d-flex flex-column align-items-center justify-content-center">
+      <%- include('./includes/episode') %>
+
+      <div class="d-flex align-items-center justify-content-between p-2 m-5" style="width: 200px; ">
+        
+          <a href="/episodes?page=<%= page - 1 %>" class="prev d-flex align-item-center"><i
+              class="bi bi-caret-left"></i>Preview</a> |
+            <a href="/episodes?page=<%= page + 1 %>" class="next d-flex align-item-center">Next <i
+                class="bi bi-caret-right"></i></a>
+      </div>
+      <div id="loader" class="loader"></div>
+  </section>
+
+  <%- include('./includes/footer') %>

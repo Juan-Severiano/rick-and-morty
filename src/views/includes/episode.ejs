@@ -1,0 +1,17 @@
+<ul class="list-characters d-flex flex-wrap align-items-center justify-content-center">
+    <% episodes.forEach((episode)=> { %>
+        <li class="location d-flex flex-row">
+            <div class="card" id="location">
+                <h2>
+                    <%= episode.name %>
+                </h2>
+                <p class="d-flex align-items-center">
+                </p>
+                <p class="disable">Air Date</p>
+                <p><a href="" class="location-links"><%= episode.air_date %></a></p>
+                <p class="disable">Episode: </p>
+                <p><a href="" class="location-links"><%= episode.episode %></a></p>
+            </div>
+        </li>
+        <% }) %>
+</ul>
