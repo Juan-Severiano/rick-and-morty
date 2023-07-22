@@ -1,0 +1,17 @@
+<ul class="list-characters d-flex flex-wrap align-items-center justify-content-center">
+    <% locations.forEach((location)=> { %>
+        <li class="location d-flex flex-row">
+            <div class="card" id="location">
+                <h2>
+                    <%= location.name %>
+                </h2>
+                <p class="d-flex align-items-center">
+                </p>
+                <p class="disable">Location Type:</p>
+                <p><a href="" class="location-links"><%= location.type %></a></p>
+                <p class="disable">Dimension</p>
+                <p><a href="" class="location-links"><%= location.dimension %></a></p>
+            </div>
+        </li>
+        <% }) %>
+</ul>
