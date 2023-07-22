@@ -1,5 +1,4 @@
 const plumbus = require('rickmortyapi');
-const fetch = require('node-fetch');
 
 exports.locationController = async (req, res) => {
   try {

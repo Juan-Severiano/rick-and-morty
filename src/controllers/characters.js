@@ -1,6 +1,5 @@
 const { async } = require('regenerator-runtime');
 const plumbus = require('rickmortyapi');
-const fetch = require('node-fetch');
 
 exports.characters = async (req, res) => {
   try {
