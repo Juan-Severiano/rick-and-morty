@@ -1,5 +1,4 @@
 const plumbus = require('rickmortyapi');
-const fetch = require('node-fetch');
 
 exports.episodeController = async (req, res) => {
   try {
