@@ -1,8 +1,7 @@
 {
     "name": "express-base-project",
     "version": "1.0.0",
-    "description": "Projeto para consumir a API de Rick and Morty",
-    "author": "Francisco Juan Severiano",
+    "description": "",
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +9,8 @@
         "dev": "webpack -w"
     },
     "keywords": [],
-    "license": "MIT",
+    "author": "",
+    "license": "ISC",
     "dependencies": {
         "core-js": "^3.9.1",
         "css-loader": "^5.1.3",
