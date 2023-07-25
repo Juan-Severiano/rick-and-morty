@@ -17,6 +17,7 @@
 
 #change-theme {
     max-width: 50px;
+    margin-right: 10px;
 }
 
 #change-theme:hover {
@@ -203,6 +204,33 @@ a:hover {
 }
 .bottom p {
     color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .navbar-toggler-icon {
+      color: #fff!important;
+    }
+    .character {
+      flex-direction: column!important;
+      width: 300px;
+      min-height: 400px;
+    }
+    ul.nav {
+      flex-direction: column;
+      justify-content: end!important;
+      align-items: end;
+    }
+    li img {
+      border-radius: 20px 20px 0 0!important;
+      border: none;
+      margin-left: 0;
+      width: 300px;
+    }
+    .card {
+        border: none;
+        border-radius: 0 0 20px 20px!important;
+        width: 250px!important;
+    }
 }
 
 @keyframes spin {
