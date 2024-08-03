@@ -6,8 +6,9 @@
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon server.js --ignore public --ignore frontend",
-        "dev": "webpack -w"
+        "dev": "nodemon server.js --ignore public --ignore frontend",
+        "build": "webpack",
+        "start": "node server.js"
     },
     "keywords": [],
     "license": "MIT",
